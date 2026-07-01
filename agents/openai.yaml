@@ -1,0 +1,4 @@
+interface:
+  display_name: "TC Lab Report Skill"
+  short_description: "German Technische Chemie reports with DOCX/PDF QA"
+  default_prompt: "Use $tc-lab-report-skill to write or revise a German Technische Chemie lab report from data, Versuchsanleitung, Vorgaben, and drafts."
