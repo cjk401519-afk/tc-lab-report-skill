@@ -174,7 +174,31 @@ For a Chinese full catalog of all recurring issues and failure modes, see `PROBL
 
 - `SKILL.md` - main skill workflow.
 - `references/report-checklist.md` - detailed standing checklist and accumulated user preferences.
+- `scripts/sync_final_report.py` - helper to overwrite same-topic old DOCX/PDF report copies with the accepted final pair and remove obvious intermediate drafts.
 - `agents/openai.yaml` - display metadata.
+
+## Final-Version Cleanup Helper
+
+After a final report has been accepted, run a dry-run first:
+
+```bash
+python3 scripts/sync_final_report.py \
+  --docx "/path/to/final.docx" \
+  --pdf "/path/to/final.pdf" \
+  --topic "stoff chemischer reaktion"
+```
+
+If the planned overwrite/delete list is correct, apply it:
+
+```bash
+python3 scripts/sync_final_report.py \
+  --docx "/path/to/final.docx" \
+  --pdf "/path/to/final.pdf" \
+  --topic "stoff chemischer reaktion" \
+  --commit
+```
+
+The helper only targets same-topic `.docx`/`.pdf` report files. It is not for raw data, teaching PDFs, images, or scripts.
 
 ## Maintenance Rule
 
