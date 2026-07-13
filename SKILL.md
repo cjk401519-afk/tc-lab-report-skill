@@ -70,6 +70,11 @@ Before writing or editing a report, load `references/report-checklist.md`. Use i
    - Inspect every page for formula clipping, equation-number alignment, unit wrapping, TOC links/page numbers, page numbers, captions, image placement, appendix labeling, cover-page alignment, blank pages, and overflow.
    - Deliver both DOCX and PDF when the user asks for final output.
 
+9. Manage final versions when requested.
+   - When the user accepts a final DOCX/PDF and asks to reduce clutter, use `scripts/sync_final_report.py` to dry-run, then overwrite same-topic report copies with the accepted pair and remove obvious intermediate report drafts.
+   - Only touch same-topic `.docx`/`.pdf` report files. Do not remove raw data, teaching PDFs, images, scripts, or unrelated reports.
+   - Treat read-only received files as normal: try to make them writable, continue if one file fails, and report any failures clearly.
+
 ## Iteration Rule
 
 When the user says that a correction should be remembered for future lab reports, update this skill before or after completing the requested report change. Put recurring preferences and failure modes in `references/report-checklist.md` under "User-Specific Refinements"; edit `SKILL.md` only when the workflow itself changes.
