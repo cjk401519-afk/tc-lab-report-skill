@@ -161,6 +161,7 @@ Render DOCX to PDF and PNGs, then inspect:
 - Cover page alignment, especially date labels and values.
 - TOC page isolation, links, and page numbers.
 - Formula layout, variable styling, unit styling, and equation-number alignment.
+- Mandatory machine gate: run `scripts/audit_equation_alignment.py` on the final exported PDF. Every numbered display equation must share the page/text-block center and one right-edge number column within the script tolerance. Do not deliver on failure, even when a spot check looks acceptable.
 - Unit columns and symbol lists for unwanted wrapping such as `mL` split from `min^-1`.
 - Page numbers after section breaks and appendices.
 - Figure captions below and table captions above.
