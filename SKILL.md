@@ -67,6 +67,7 @@ Before writing or editing a report, load `references/report-checklist.md`. Use i
 8. Render and QA before final delivery.
    - Use the documents skill and its DOCX render workflow when editing `.docx`.
    - Render DOCX to PDF and page PNGs after layout-sensitive changes.
+   - Run `scripts/audit_equation_alignment.py FINAL.pdf` after the final Word/PDF export. A nonzero result blocks delivery: repair every shifted formula and equation-number column, export again, and rerun the audit.
    - Inspect every page for formula clipping, equation-number alignment, unit wrapping, TOC links/page numbers, page numbers, captions, image placement, appendix labeling, cover-page alignment, blank pages, and overflow.
    - Deliver both DOCX and PDF when the user asks for final output.
 
